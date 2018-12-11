@@ -1,0 +1,96 @@
+Listening for connections on port 7777
+Waiting for a client to connect...
+Connection from 127.0.0.1
+Waiting for msg0||msg1
++++ read 145 bytes from socket
+
+---- read buffer -----------------------------------------------------------
+000000000393dffe66a3cf4ecff0b933785110522fc026829b830e8df1bfdd88def8243698d1aac92525ee7adcb4ddceab32defc2cfecb30ae4cc640d949508bdd1dbae2cb130000
+----------------------------------------------------------------------------
+
+---- Msg0 Details (from Client) --------------------------------------------
+msg0.extended_epid_group_id = 0
+----------------------------------------------------------------------------
+
+---- Msg1 Details (from Client) --------------------------------------------
+msg1.g_a.gx = 0393dffe66a3cf4ecff0b933785110522fc026829b830e8df1bfdd88def82436
+msg1.g_a.gy = 98d1aac92525ee7adcb4ddceab32defc2cfecb30ae4cc640d949508bdd1dbae2
+msg1.gid    = cb130000
+----------------------------------------------------------------------------
++++ generating session key Gb
++++ deriving KDK
++++ shared secret= eeacab936088e21128dde22e537d97a76169d2691ceb600a1a83309c9dafa4d0
++++ reversed     = d0a4af9d9c30831a0a60eb1c69d26961a7977d532ee2dd2811e2886093abacee
++++ KDK = 9509528638123b623adad62d4b3b56c8
++++ deriving SMK
++++ SMK = 1f852d99d6c444921e63b3daf73bf956
++++ Trying agent_curl
++++ Setting cert file to ../ias-ra-data/cert/client.crt
++++ Setting client key file to ../ias-ra-data/cert/client.key
++++ client cert key password length = 4
++++ client cert key password is 1234
+
+---- IAS sigrl HTTP Request ------------------------------------------------
+HTTP GET https://test-as.sgx.trustedservices.intel.com/attestation/sgx/v3/sigrl/000013cb
+----------------------------------------------------------------------------
+* Could not resolve proxy: proxy-us.intel.com
+* Closing connection 0
+Could not query IAS
+could not retrieve the sigrl
+error processing msg1
+Waiting for a client to connect...
+^C
+terminating
+yun@yun:~/Documents/sgx-ra-sample-master$ clear
+[3;J
+yun@yun:~/Documents/sgx-ra-sample-master$ ./run-server 
++++ Using default CA bundle /etc/ssl/certs/ca-certificates.crt
+Using default private key
++++ using private key:
+Using cert file ../ias-ra-data/cert/client.crt
++++ using cert key file ../ias-ra-data/cert/client.key
++++ Password:           31323334
++++ One-time pad:       dcee95c8
++++ Encrypted password: eddca6fc
+Listening for connections on port 7777
+Waiting for a client to connect...
+Connection from 127.0.0.1
+Waiting for msg0||msg1
++++ read 145 bytes from socket
+
+---- read buffer -----------------------------------------------------------
+000000004c6148392c9e016225a4529536ea44fa3d0b692487887e259e19143368db470ab1b607e34e008873526af2932848efbd133be68635265d9cbf4a852008fcd7b7cb130000
+----------------------------------------------------------------------------
+
+---- Msg0 Details (from Client) --------------------------------------------
+msg0.extended_epid_group_id = 0
+----------------------------------------------------------------------------
+
+---- Msg1 Details (from Client) --------------------------------------------
+msg1.g_a.gx = 4c6148392c9e016225a4529536ea44fa3d0b692487887e259e19143368db470a
+msg1.g_a.gy = b1b607e34e008873526af2932848efbd133be68635265d9cbf4a852008fcd7b7
+msg1.gid    = cb130000
+----------------------------------------------------------------------------
++++ generating session key Gb
++++ deriving KDK
++++ shared secret= e6214d351d581a0810323f49f1ba7a36b45d786a9ab1d37c2f8baea9b34b7deb
++++ reversed     = eb7d4bb3a9ae8b2f7cd3b19a6a785db4367abaf1493f3210081a581d354d21e6
++++ KDK = 3aa0b30e5384132745d8ff709c86bc50
++++ deriving SMK
++++ SMK = 023e49084fbafb023f8e6ae383c3a9d4
++++ Trying agent_curl
++++ Setting cert file to ../ias-ra-data/cert/client.crt
++++ Setting client key file to ../ias-ra-data/cert/client.key
++++ client cert key password length = 4
++++ client cert key password is 1234
+
+---- IAS sigrl HTTP Request ------------------------------------------------
+HTTP GET https://test-as.sgx.trustedservices.intel.com/attestation/sgx/v3/sigrl/000013cb
+----------------------------------------------------------------------------
+* Could not resolve proxy: proxy-us.intel.com
+* Closing connection 0
+Could not query IAS
+could not retrieve the sigrl
+error processing msg1
+Waiting for a client to connect...
+
